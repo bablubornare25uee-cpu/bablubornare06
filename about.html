@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+/* Basic styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+	margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+            /* Background Image */
+            background-color:#D6ADA5;
+            background-size:auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 150vh;
+}
+
+ /* Text Container */
+        .content {
+            text-align: center;
+            color: white;
+            padding-top: 40vh;
+            backdrop-filter: blur(3px); /* Soft blur behind text */
+        }
+		
+h1{
+ font-family:Roboto;
+ color:#615957;
+ margin-left:00px;
+ margin-top:50px;
+ display:inline-block;
+ padding:10px 20px;
+}
+
+h2{
+ font-family:Roboto;
+ color:#453D3B;
+ margin-left:00px;
+ margin-top:50px;
+ display:inline-block;
+ padding:10px 20px;
+}
+
+p{
+ font-family:Roboto;
+ color:#615957;
+ margin-left:00px;
+ margin-top:50px;
+ display:inline-block;
+ padding:10px 20px;
+}
+h1:hover{
+background-color:#black;
+}
+
+.navbar {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Desktop menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;               /* hide menu */
+        flex-direction: column;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;               /* show menu on click */
+    }
+
+    .menu-icon {
+        display: block;              /* show hamburger */
+    }
+}
+footer {
+      text-align: center;
+      padding: 20px ;
+      background: #111;
+      color: #ccc;
+	   margin-bottom:50px;
+    }
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	
+    <nav class="navbar">
+        <div class="logo">WELCOME TO MY WEBPAGE</div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="file:///C:/Users/Sir/Documents/index.html">HOME</a></li>
+            <li><a href="file:///C:/Users/Sir/Documents/form.html?">REGISTRATION</a></li>
+            <li><a href="file:///C:/Users/Sir/Documents/robo.html">CHATBOT</a></li>
+            <li><a href="file:///C:/Users/Sir/Documents/about.html">ABOUT US</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">
+            ☰
+        </div>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+    </script>
+
+</div>
+<div class="content">
+        <h1> ABOUT ANNAPURNA MESS
+</h1>
+        <h2> Welcome to Annapurna Mess – where every meal is a taste of home! 🌸🍛</h2>
+		<br>
+<p>
+At Annapurna Mess, we believe food is not just about filling the stomach; it’s about 
+creating comfort, sharing warmth, and celebrating authentic flavors. Our mission is 
+simple: serve fresh, wholesome, and affordable meals that remind you of home-cooked 
+goodness.
+From hearty breakfast plates to satisfying lunch and dinner options, each dish is
+ prepared with care and love, using quality ingredients to ensure that every bite is 
+ flavorful and nourishing. Whether you’re a regular or visiting us for the first time, 
+ we strive to make your dining experience friendly, cozy, and memorable.
+
+Come in, grab a plate, and enjoy the taste of tradition with a touch of modern care.
+ Annapurna Mess – where food feels like home! 🌿💛
+        </p>
+    </div>
+	<br>
+	<br>
+	<footer>
+  !! THANK YOU FOR VISIT !!
+  </footer>
+</body>
+</html>
