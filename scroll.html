@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta-name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smooth Scroll Animations Website</title>
+
+  <style>
+    /* -------- Global -------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+	img{
+width:99%;
+border:3px solid black;
+}
+
+h1{
+ font-family:Roboto;
+ margin-left:500px;
+ margin-top:2px;
+ display:inline-block;
+ padding:10px 20px;
+}
+
+h1:hover{
+background-color:#f4f4f4;
+}
+
+    /* -------- Navigation -------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    /* -------- Sections -------- */
+    section {
+      padding: 100px 12%;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: 1s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Slide-left */
+    .slide-left {
+      transform: translateX(-80px);
+      opacity: 0;
+    }
+
+    .slide-left.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* Slide-right */
+    .slide-right {
+      transform: translateX(80px);
+      opacity: 0;
+    }
+
+    .slide-right.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    /* -------- Footer -------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #ccc;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      nav ul {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="file:///C:/Users/Sir/Documents/index.html">HOME</a></li>
+      <li><a href="file:///C:/Users/Sir/Documents/form.html?">REGISTRATION</a></li>
+      <li><a href="file:///C:/Users/Sir/Documents/robo.html">CHATBOT</a></li>
+      <li><a href="file:///C:/Users/Sir/Documents/about.html">ABOUT US</a></li>
+    </ul>
+  </nav>
+<hr>
+<br>
+  <br>
+<h1>NON-VEG</h1>
+  <!-- About Section -->
+  <section id="about">
+    <img src="non.png">
+  </section>
+  
+  <hr>
+  <h1>PANNER</h1>
+
+  <section id="about">
+    <img src="panner.png">
+  </section>
+
+<hr>
+<h1>PURAN-POLI</h1>
+  <!-- Services Section -->
+  <section id="services">
+   
+	<img src="puran.png">
+  </section>
+
+<hr>
+<h1>DAL BAATI CHURMA</h1>
+  <!-- Contact Section -->
+  <section id="contact">
+ <img src="bati.png">
+  </section>
+
+  <footer>
+    THANK YOU FOR VISIT!!
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const elements = document.querySelectorAll("section, .slide-left, .slide-right");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    elements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

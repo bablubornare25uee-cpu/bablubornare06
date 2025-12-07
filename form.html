@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration Form</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form-container {
+        background: #ffffff;
+        width: 420px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff6b00;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        font-size: 15px;
+    }
+
+    input:focus, textarea:focus, select:focus {
+        border: 1px solid #ff6b00;
+        box-shadow: 0 0 5px rgba(255,107,0,0.5);
+    }
+
+    button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        background: #ff6b00;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #e55f00;
+		
+		
+    }
+</style>
+
+</head>
+<body>
+
+<div class="form-container">
+    <h2>USER REGISTRATION FORM</h2>
+
+    <form>
+
+        <label>Full Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Mobile Number:</label>
+        <input type="tel" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter email address" required>
+
+        <label>Address:</label>
+        <textarea rows="3" placeholder="Enter your address" required></textarea>
+
+        <label>Lunch Time:</label>
+        <select required>
+            <option value="">Select Time</option>
+            <option>12:00 PM</option>
+            <option>12:30 PM</option>
+            <option>1:00 PM</option>
+            <option>1:30 PM</option>
+        </select>
+		
+		<label>dinner Time:</label>
+        <select required>
+            <option value="">Select Time</option>
+            <option>07:30 PM</option>
+			<option>08:00 PM</option>
+            <option>09:00 PM</option>
+            <option>09:30 PM</option>
+        </select>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
